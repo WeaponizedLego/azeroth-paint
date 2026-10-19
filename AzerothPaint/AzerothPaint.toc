@@ -1,0 +1,10 @@
+## Interface: 16001, 120105
+## Title: Azeroth Paint
+## Notes: Doodle on your screen, and on the world map for your party.
+## Author: Glen Jensen
+## Version: 0.1.0
+## SavedVariablesPerCharacter: AzerothPaintDB
+
+Core.lua
+Screen.lua
+Map.lua

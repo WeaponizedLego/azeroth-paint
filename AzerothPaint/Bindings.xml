@@ -1,0 +1,3 @@
+<Bindings>
+	<Binding name="AZEROTHPAINT_HOLD" runOnUp="true" category="ADDONS">AzerothPaint_Hold(keystate)</Binding>
+</Bindings>

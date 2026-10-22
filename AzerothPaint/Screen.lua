@@ -11,7 +11,6 @@ local strokes, notes -- UIParent units from the bottom-left
 local frame = CreateFrame("Frame", "AzerothPaintScreen", UIParent)
 frame:SetAllPoints()
 frame:SetFrameStrata("DIALOG")
-frame:EnableMouse(false)
 local lines = ns.NewLines(frame)
 
 local hint = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
@@ -180,6 +179,8 @@ frame:RegisterEvent("ADDON_LOADED")
 frame:SetScript("OnEvent", function(_, _, name)
 	if name ~= ADDON then return end
 	frame:UnregisterEvent("ADDON_LOADED")
+	-- Setting mouse scripts turns the mouse on, so switch it off once they're all in.
+	frame:EnableMouse(false)
 	local db = ns.DB()
 	db.screen = db.screen or {}
 	db.notes = db.notes or {}
